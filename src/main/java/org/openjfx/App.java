@@ -36,6 +36,7 @@ public class App extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
         playMySnd();
+        redMyTXT();
     }
     private void drawSome(GraphicsContext gc) {
         gc.setFill(Color.GREEN);
@@ -46,7 +47,19 @@ public class App extends Application {
     }
 
 
-    private void playMySnd(){
+    private void  redMyTXT() {
+    //  show how to read txt files...
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream inputStream = classLoader.getResourceAsStream("file.txt");
+        if (inputStream == null) return;
+        printInputStream(inputStream);
+
+        // loading resources:
+        //https://mkyong.com/java/java-read-a-file-from-resources-folder/
+
+    }
+
+        private void playMySnd(){
 /*
 //  show how to read txt files...
         ClassLoader classLoader = getClass().getClassLoader();
