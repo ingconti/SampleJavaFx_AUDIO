@@ -60,18 +60,6 @@ public class App extends Application {
     }
 
         private void playMySnd(){
-/*
-//  show how to read txt files...
-        ClassLoader classLoader = getClass().getClassLoader();
-        InputStream inputStream = classLoader.getResourceAsStream("file.txt");
-        if (inputStream==null)return;
-        printInputStream(inputStream);
-
-*/
-        // loading resources:
-        //https://mkyong.com/java/java-read-a-file-from-resources-folder/
-
-
         ClassLoader classLoader = getClass().getClassLoader();
         URL url = classLoader.getResource("bass.mp3");
 
@@ -82,6 +70,7 @@ public class App extends Application {
         MediaPlayer mediaPlayer = new MediaPlayer(medium);
         mediaPlayer.play();
     }
+
 
     private static void printInputStream(InputStream is) {
 
